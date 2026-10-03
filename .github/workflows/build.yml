@@ -43,5 +43,5 @@ jobs:
         shell: powershell
         run: |
           ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"ccastellanosf-umg_CleanArchitecture" /o:"ccastellanosf-umg" /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
-          dotnet build Clean.Architecture.slnx
+          dotnet build
           ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
